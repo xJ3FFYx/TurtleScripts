@@ -1,4 +1,4 @@
---Version 1.0.0
+--Version 1.0.1
 width = 5
 lenght = 5
 function clearTerm()
@@ -70,16 +70,16 @@ print("HELLO")
 mineForward(1)
 turnLeft()
 dig()
-moveUp()
+moveUp(1)
 dig()
-moveUp()
+moveUp(1)
 dig()
 turnRight()
 turnRight()
 dig()
-moveDown()
+moveDown(1)
 dig()
-moveDown()
+moveDown(1)
 dig()
 turnLeft()
 moveUp()
@@ -92,10 +92,10 @@ turnRight()
 for i = 1,width do
     mineForward(lenght)
     if i == width then
-        moveDown()
-        turnLeft()
-        moveForward(distiance)
-        turnRight()
+        --moveDown(1)
+        --turnLeft()
+        --moveForward(distiance)
+        --turnRight()
     elseif (i % 2 == 0) then
         turnLeft()
         mineForward(1)
