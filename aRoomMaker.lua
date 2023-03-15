@@ -1,4 +1,4 @@
---Version 1.0.2
+--Version 1.0.3
 width = 5
 lenght = 5
 function clearTerm()
