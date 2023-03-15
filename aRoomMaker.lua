@@ -1,4 +1,4 @@
---Version 1.0.7
+--Version 1.1.0
 width = 5
 lenght = 5
 function clearTerm()
@@ -60,8 +60,7 @@ end
 
 distiance = math.floor(width/2)
 
-width 
-lenght = lenght -1
+rowLenght = lenght -1
 clearTerm()
 print("HELLO")
 
@@ -93,10 +92,10 @@ for i = 1,width do
     print("Row " , i)
     mineForward(lenght)
     if i == width then
-        --moveDown(1)
-        --turnLeft()
-        --moveForward(distiance)
-        --turnRight()
+        moveDown(1)
+        turnLeft()
+        moveForward(distiance)
+        turnRight()
         
     elseif (i % 2 == 0) then
         turnLeft()
