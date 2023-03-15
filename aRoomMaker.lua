@@ -5,7 +5,7 @@ end
 
 function digUp()
     while turtle.detectUp() do 
-        turtle.digUP()
+        turtle.digUp()
     end
 end
 function dig()
@@ -46,7 +46,18 @@ function turnLeft()
     turtle.turnLeft()
 end
 
-
-
+function mineForward(x)
+    for i = 1,x do
+        while not turtle.forward() do 
+            dig()
+        end
+        digUp()
+        digDown()
+    end
+end
 clearTerm()
 print("HELLO")
+
+
+moveUp(1)
+mineForward(1)
