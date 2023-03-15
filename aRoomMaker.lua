@@ -96,7 +96,7 @@ for i = 1,width do
         --turnLeft()
         --moveForward(distiance)
         --turnRight()
-        Finsish
+        
     elseif (i % 2 == 0) then
         turnLeft()
         mineForward(1)
