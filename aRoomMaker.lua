@@ -37,7 +37,7 @@ function moveUp(x)
 end
 function moveDown(x)
     for i = 1,x do
-        while not turtle.up() do 
+        while not turtle.down() do 
             digDown()
         end
     end
