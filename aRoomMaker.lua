@@ -1,6 +1,9 @@
 --Version 1.1.0
-width = 5
-lenght = 5
+roomWidth = 5
+roomLenght = 5
+roomHeight = 3
+turtleY = 1
+
 function clearTerm()
     term.clear()
     term.setCursorPos(1,1)
@@ -33,6 +36,7 @@ function moveUp(x)
         while not turtle.up() do 
             digUp()
         end
+        turtleY = turtleY + 1
     end
 end
 function moveDown(x)
@@ -40,6 +44,7 @@ function moveDown(x)
         while not turtle.down() do 
             digDown()
         end
+        turtleY = turtleY - 1
     end
 end
 function turnRight()
@@ -47,6 +52,10 @@ function turnRight()
 end
 function turnLeft()
     turtle.turnLeft()
+end
+function turnAround()
+    turnRight()
+    turnRight()
 end
 function mineForward(x)
     for i = 1,x do
@@ -58,40 +67,43 @@ function mineForward(x)
     end
 end
 
-distiance = math.floor(width/2)
+function mineDoor()
+    moveForward(1)
+    turnLeft()
+    for i 1,2 do
+        dig()
+        moveUp(1)
+    end
+    dig()
+    turnAround()
+    for i 1,2 do
+        dig()
+        moveDown(1)
+    end
+    dig()
+    turnLeft()
+end
 
-rowLenght = lenght -1
+distiance = math.floor(roomWidth/2)
+rowLenght = roomLenght -1
+
 clearTerm()
 print("HELLO")
 
+mineDoor()
 
-
-moveForward(1)
-turnLeft()
-dig()
-moveUp(1)
-dig()
-moveUp(1)
-dig()
-turnRight()
-turnRight()
-dig()
-moveDown(1)
-dig()
-moveDown(1)
-dig()
-turnLeft()
+--Get to First Row
 moveUp(1)
 mineForward(1)
 turnLeft()
 mineForward(distiance)
 turnRight()
 
-
-for i = 1,width do
+---clear Row
+for i = 1,roomWidth do
     print("Row " , i)
-    mineForward(lenght)
-    if i == width then
+    mineForward(rowLenght)
+    if i == roomWidth then
         moveDown(1)
         turnLeft()
         moveForward(distiance)
