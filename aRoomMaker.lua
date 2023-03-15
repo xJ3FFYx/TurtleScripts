@@ -1,4 +1,4 @@
---Version 1.0.5
+--Version 1.0.6
 width = 5
 lenght = 5
 function clearTerm()
@@ -91,6 +91,7 @@ turnRight()
 
 for i = 1,width do
     mineForward(lenght)
+    print("Row " , i)
     if i == width then
         --moveDown(1)
         --turnLeft()
@@ -101,11 +102,11 @@ for i = 1,width do
         turnLeft()
         mineForward(1)
         turnLeft()
-        print("Row " , i)
+        
     else
         turnRight()
         mineForward(1)
         turnRight()
-        print("Row " , i)
+        
     end
 end
