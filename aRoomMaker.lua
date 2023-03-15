@@ -66,8 +66,23 @@ clearTerm()
 print("HELLO")
 
 
-moveUp(1)
 
+mineForward(1)
+turnLeft()
+dig()
+moveUp()
+dig()
+moveUp()
+dig()
+turnRight()
+turnRight()
+dig()
+moveDown()
+dig()
+moveDown()
+dig()
+turnLeft()
+moveUp()
 mineForward(1)
 turnLeft()
 mineForward(distiance)
@@ -80,7 +95,7 @@ for i = 1,width do
         moveDown()
         turnLeft()
         moveForward(distiance)
-        turnRigh()
+        turnRight()
     elseif (i % 2 == 0) then
         turnLeft()
         mineForward(1)
@@ -89,5 +104,5 @@ for i = 1,width do
         turnRight()
         mineForward(1)
         turnRight()
-    ended
+    end
 end
