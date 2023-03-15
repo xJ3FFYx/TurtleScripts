@@ -1,0 +1,2 @@
+shell.run("delete", "aRoomMaker")
+shell.run("wget", "https://raw.githubusercontent.com/xJ3FFYx/TurtleScripts/main/aRoomMaker.lua", "aRoomMaker")
