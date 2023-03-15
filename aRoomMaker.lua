@@ -1,4 +1,4 @@
---Version 0.1.0
+--Version 1.0.0
 width = 5
 lenght = 5
 function clearTerm()
@@ -77,7 +77,10 @@ turnRight()
 for i = 1,width do
     mineForward(lenght)
     if i == width then
-        --return home
+        moveDown()
+        turnLeft()
+        moveForward(distiance)
+        turnRigh()
     elseif (i % 2 == 0) then
         turnLeft()
         mineForward(1)
@@ -86,5 +89,5 @@ for i = 1,width do
         turnRight()
         mineForward(1)
         turnRight()
-    end
+    ended
 end
