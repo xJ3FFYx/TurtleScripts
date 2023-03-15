@@ -1,5 +1,5 @@
-height = 5
-turtleY = 1
+width = 5
+lenght = 5
 function clearTerm()
     term.clear()
     term.setCursorPos(1,1)
@@ -57,6 +57,8 @@ function mineForward(x)
         digDown()
     end
 end
+
+distiance = math.floor(width/2)
 clearTerm()
 print("HELLO")
 
@@ -65,10 +67,10 @@ moveUp(1)
 
 mineForward(1)
 turnLeft()
-mineForward(2)
+mineForward(distiance)
 turnRight()
 
-for i = 1,2 do
+for i = 1, 2 do
     mineForward(4)
     turnRight()
     mineForward(1)
