@@ -1,6 +1,8 @@
-term.clear()
-print("Welcome the the Room Builder")
 
+funcion clearTerm()
+    term.clear()
+    term.setCursorPos(1,1)
+end
 
 function moveForward(x)
     for i = 0,10 do
@@ -10,4 +12,6 @@ function moveForward(x)
     end
 end
 
+clear()
+print("HELLO")
 moveForward(5)
