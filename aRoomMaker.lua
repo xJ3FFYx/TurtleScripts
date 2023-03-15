@@ -64,14 +64,19 @@ print("HELLO")
 moveUp(1)
 
 mineForward(1)
-turnRight()
+turnLeft()
 mineForward(2)
-turnLeft()
-mineForward(4)
 turnRight()
-mineForward(1)
-turnRight()
+
+for i = 1,2 do
+    mineForward(4)
+    turnRight()
+    mineForward(1)
+    turnRight()
+    mineForward(4)
+    turnLeft()
+    mineForward(1)
+    turnLeft()
+end
+
 mineForward(4)
-turnLeft()
-mineForward(1)
-turnLeft()
