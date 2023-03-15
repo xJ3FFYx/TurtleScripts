@@ -1,3 +1,5 @@
+height = 5
+turtleY = 1
 function clearTerm()
     term.clear()
     term.setCursorPos(1,1)
@@ -60,4 +62,16 @@ print("HELLO")
 
 
 moveUp(1)
+
 mineForward(1)
+turnRight()
+mineForward(2)
+turnLeft()
+mineForward(4)
+turnRight()
+mineForward(1)
+turnRight()
+mineForward(4)
+turnLeft()
+mineForward(1)
+turnLeft()
