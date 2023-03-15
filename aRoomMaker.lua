@@ -1,5 +1,5 @@
 
-funcion clearTerm()
+function clearTerm()
     term.clear()
     term.setCursorPos(1,1)
 end
@@ -12,6 +12,6 @@ function moveForward(x)
     end
 end
 
-clear()
+clearTerm()
 print("HELLO")
 moveForward(5)
