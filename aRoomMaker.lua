@@ -47,7 +47,6 @@ end
 function turnLeft()
     turtle.turnLeft()
 end
-
 function mineForward(x)
     for i = 1,x do
         while not turtle.forward() do 
@@ -59,6 +58,8 @@ function mineForward(x)
 end
 
 distiance = math.floor(width/2)
+width = width - 1
+lenght = lenght - 1
 clearTerm()
 print("HELLO")
 
@@ -70,15 +71,18 @@ turnLeft()
 mineForward(distiance)
 turnRight()
 
-for i = 1, 2 do
-    mineForward(4)
-    turnRight()
-    mineForward(1)
-    turnRight()
-    mineForward(4)
-    turnLeft()
-    mineForward(1)
-    turnLeft()
-end
 
-mineForward(4)
+for i = 1, width do
+    mineForward(Lenght)
+    if i = width then
+        --return home
+    elseif (i % 2 == 0) then
+        turnLeft()
+        mineForward(1)
+        turnLeft()
+    else
+        turnRight()
+        mineForward(1)
+        turnRight()
+    end
+end
