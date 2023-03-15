@@ -58,8 +58,9 @@ function mineForward(x)
 end
 
 distiance = math.floor(width/2)
-width = width - 1
-lenght = lenght - 1
+
+width -=
+lenght -= 1
 clearTerm()
 print("HELLO")
 
@@ -72,9 +73,9 @@ mineForward(distiance)
 turnRight()
 
 
-for i = 1, width do
+for i = 1,width do
     mineForward(Lenght)
-    if i = width then
+    if i == width then
         --return home
     elseif (i % 2 == 0) then
         turnLeft()
