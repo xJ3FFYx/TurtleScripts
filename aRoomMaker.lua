@@ -1,4 +1,4 @@
---Version 1.0.3
+--Version 1.0.5
 width = 5
 lenght = 5
 function clearTerm()
@@ -82,7 +82,7 @@ dig()
 moveDown(1)
 dig()
 turnLeft()
-moveUp()
+moveUp(1)
 mineForward(1)
 turnLeft()
 mineForward(distiance)
@@ -101,11 +101,11 @@ for i = 1,width do
         turnLeft()
         mineForward(1)
         turnLeft()
-        print("Row " + i)
+        print("Row " , i)
     else
         turnRight()
         mineForward(1)
         turnRight()
-        print("Row " + i)
+        print("Row " , i)
     end
 end
