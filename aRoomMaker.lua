@@ -1,3 +1,4 @@
+--Version 0.1.0
 width = 5
 lenght = 5
 function clearTerm()
@@ -59,8 +60,8 @@ end
 
 distiance = math.floor(width/2)
 
-width -=
-lenght -= 1
+width = width -1
+lenght = lenght -1
 clearTerm()
 print("HELLO")
 
@@ -74,7 +75,7 @@ turnRight()
 
 
 for i = 1,width do
-    mineForward(Lenght)
+    mineForward(lenght)
     if i == width then
         --return home
     elseif (i % 2 == 0) then
