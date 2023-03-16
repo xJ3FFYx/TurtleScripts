@@ -1,7 +1,7 @@
---Version 1.1.0
+--Version 1.1.1
 roomWidth = 5
 roomLenght = 5
-roomHeight = 3
+roomHeight = 6
 turtleY = 1
 
 function clearTerm()
@@ -99,25 +99,32 @@ turnLeft()
 mineForward(distiance)
 turnRight()
 
+
 ---clear Row
-for i = 1,roomWidth do
-    print("Row " , i)
-    mineForward(rowLenght)
-    if i == roomWidth then
-        moveDown(1)
-        turnLeft()
-        moveForward(distiance)
-        turnRight()
-        
-    elseif (i % 2 == 0) then
-        turnLeft()
-        mineForward(1)
-        turnLeft()
-        
-    else
-        turnRight()
-        mineForward(1)
-        turnRight()
-        
+for i =1,2 do
+    for i = 1,roomWidth do
+        print("Row " , i)
+        mineForward(rowLenght)
+        if i == roomWidth then
+            --moveDown(1)
+            --turnLeft()
+            --moveForward(distiance)
+            --turnRight()
+            
+        elseif (i % 2 == 0) then
+            turnLeft()
+            mineForward(1)
+            turnLeft()
+            
+        else
+            turnRight()
+            mineForward(1)
+            turnRight()
+            
+        end
     end
+    turnAround()
+    moveUP(3)
 end
+
+moveDown(3)
