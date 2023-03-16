@@ -1,6 +1,6 @@
---Version 1.1.1
-roomWidth = 5
-roomLenght = 5
+--Version 1.1.4
+roomWidth = 9
+roomLenght = 4
 roomHeight = 6
 turtleY = 1
 
@@ -70,7 +70,7 @@ end
 function mineDoor()
     moveForward(1)
     turnLeft()
-    for i 1,2 do
+    for i=1,2 do
         dig()
         moveUp(1)
     end
@@ -99,9 +99,9 @@ turnLeft()
 mineForward(distiance)
 turnRight()
 
-
+numOfMineingLevels = roomHeight/3
 ---clear Row
-for i =1,2 do
+for i = 1, numOfMineingLevels do
     for i = 1,roomWidth do
         print("Row " , i)
         mineForward(rowLenght)
@@ -123,8 +123,9 @@ for i =1,2 do
             
         end
     end
-    turnAround()
-    moveUP(3)
+    if i != numOfMineingLevels then
+        turnAround()
+        moveUp(3)
 end
 
-moveDown(3)
+moveDown(3*numOfMineingLevels)
